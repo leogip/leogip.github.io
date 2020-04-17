@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Aviasales Frontend Test</title>
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <div class="app__wrapper">
+            <div class="app__inner">
+                <div class="app__logo"><img src="./Logo.png" alt="" /></div>
+                <div class="app__view view">
+                    <section class="view__filter filter block--shadow">
+                        <h3 class="filter__header">Количество пересадок</h3>
+                        <form class="filter__form form">
+                            <label class="form__label">
+                                <input
+                                    type="checkbox"
+                                    class="form__checkbox"
+                                    name="all"
+                                    id="all"
+                                />
+                                <span class="form__checkbox--aviasales"></span>
+                                <p>Все</p>
+                            </label>
+                            <label class="form__label">
+                                <input
+                                    type="checkbox"
+                                    class="form__checkbox"
+                                    name="whitout"
+                                    id="whitout"
+                                    disabled
+                                    checked
+                                />
+                                <span class="form__checkbox--aviasales"></span>
+                                <p>Без пересадок</p>
+                            </label>
+                            <label class="form__label">
+                                <input
+                                    type="checkbox"
+                                    class="form__checkbox"
+                                    name="once"
+                                    id="once"
+                                    checked
+                                />
+                                <span class="form__checkbox--aviasales"></span>
+                                1 пересадка
+                            </label>
+                            <label class="form__label">
+                                <input
+                                    type="checkbox"
+                                    class="form__checkbox"
+                                    name="twice"
+                                    id="twice"
+                                />
+                                <span class="form__checkbox--aviasales"></span>
+                                2 пересадки
+                            </label>
+                            <label class="form__label">
+                                <input
+                                    type="checkbox"
+                                    class="form__checkbox"
+                                    name="thrice"
+                                    id="thrice"
+                                />
+                                <span class="form__checkbox--aviasales"></span>
+                                3 пересадки
+                            </label>
+                        </form>
+                    </section>
+
+                    <section class="view__tickets tickets">
+                        <div class="tickets__tabs">
+                            <input type="radio" name="sort" id="cost" checked />
+                            <label for="cost" class="tickets__tab"
+                                >Самый дешевый
+                            </label>
+                            <input type="radio" name="sort" id="fast" />
+                            <label for="fast" class="tickets__tab"
+                                >Самый быстрый
+                            </label>
+                        </div>
+                        <div class="tickets__list">
+                            <a class="tickets__item ticket block--shadow">
+                                <div class="ticket__header">
+                                    <div class="ticket__price">13 400 Р</div>
+                                    <div class="ticket__airline">
+                                        <img src="./S7 Logo.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="ticket__version">
+                                    <div>
+                                        <p class="ticket__version-lighten">
+                                            MOW – HKT
+                                        </p>
+                                        <p class="ticket__version-focus">
+                                            10:45 – 08:00
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="ticket__version-lighten">
+                                            В пути
+                                        </p>
+                                        <p class="ticket__version-focus">
+                                            21ч 15м
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="ticket__version-lighten">
+                                            2 пересадки
+                                        </p>
+                                        <p class="ticket__version-focus">
+                                            HKG, JNB
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ticket__version">
+                                    <div>
+                                        <p class="ticket__version-lighten">
+                                            MOW – HKT
+                                        </p>
+                                        <p class="ticket__version-focus">
+                                            11:20 – 00:50
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="ticket__version-lighten">
+                                            В пути
+                                        </p>
+                                        <p class="ticket__version-focus">
+                                            13ч 30м
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="ticket__version-lighten">
+                                            1 пересадка
+                                        </p>
+                                        <p class="ticket__version-focus">HKG</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,301 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+div,
+section,
+input,
+select,
+button {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #4a4a4a;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f7fa;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    outline-color: #9e9e9e;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.app__inner {
+    margin: 50px 100px;
+}
+
+@media screen and (max-width: 800px) {
+    .app__inner {
+        margin: 20px 50px;
+    }
+}
+
+.app__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.block--shadow {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    background-color: #fff;
+}
+
+.view {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.view__filter {
+    width: 230px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.view__tickets {
+    flex: 1;
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .view {
+        flex-flow: column;
+    }
+
+    .view__filter {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.filter h3 {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.form__label {
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 50px;
+    transition: background 0.2s;
+}
+.form__label:last-of-type {
+    margin-bottom: 0;
+}
+
+.form__label p {
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.form__label:hover {
+    background-color: #f1fcff;
+}
+
+.form__checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.form__checkbox--aviasales {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    margin-left: -30px;
+    box-shadow: 0 0 0 0.1em #9abbce;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.form__checkbox:checked + .form__checkbox--aviasales {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.28571 8L0 4.16123L1.20857 3.0787L4.28571 5.82726L10.7914 0L12 1.09021L4.28571 8Z' fill='%232196F3'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 0 0.1em #2196f3;
+}
+
+.form__checkbox:focus + .form__checkbox--aviasales {
+    box-shadow: 0 0 0 0.1em #9abbce, 0 0 0 0.2em #9e9e9e;
+}
+
+.form__checkbox:focus:checked + .form__checkbox--aviasales {
+    box-shadow: 0 0 0 0.1em #2196f3, 0 0 0 0.2em #9e9e9e;
+}
+
+.form__checkbox:disabled ~ p {
+    color: #a0b0b9;
+}
+
+.form__checkbox:disabled:checked + .form__checkbox--aviasales {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.28571 8L0 4.16123L1.20857 3.0787L4.28571 5.82726L10.7914 0L12 1.09021L4.28571 8Z' fill='%23a0b0b9'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 0 0.1em #a0b0b9;
+}
+
+.tickets__tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tickets__tab {
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #dfe5ec;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 0 0 5px;
+    outline-color: #9e9e9e;
+    width: 100%;
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+}
+
+.tickets__tabs input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.tickets__tab:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.tickets__tabs input:checked + .tickets__tab {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+}
+
+.ticket {
+    margin-bottom: 20px;
+    padding: 20px;
+    display: block;
+}
+
+.ticket__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket__price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #2196f3;
+}
+
+.ticket__version {
+    display: flex;
+    margin-top: 20px;
+}
+
+.ticket__version > * {
+    flex: calc(33% - 20px);
+    margin-right: 20px;
+    width: calc(33% - 20px);
+    text-transform: uppercase;
+}
+
+.ticket__version > *:not(:last-child) {
+    flex: 33%;
+    margin-right: 0px;
+    width: 33%;
+}
+
+.ticket__version-lighten {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+    color: #a0b0b9;
+}
+
+.ticket__version-focus {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+@media screen and (max-width: 460px) {
+    .ticket__version-lighten {
+        font-size: 9px;
+        line-height: 15px;
+    }
+
+    .ticket__version-focus {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ticket__price {
+        font-size: 18px;
+    }
+    .ticket__version-lighten {
+        font-size: 7px;
+        line-height: 15px;
+    }
+
+    .ticket__version-focus {
+        font-size: 10px;
+        line-height: 14px;
+    }
+}
